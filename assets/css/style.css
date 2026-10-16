@@ -531,6 +531,36 @@
   }
 }
 
+.highlightBullet {
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  margin-right: 10px;
+  border: 2px solid var(--fontPrimary);
+  border-radius: 50%;
+  vertical-align: middle;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.highlightBullet::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  width: 0.28em;
+  height: 0.28em;
+  border-top: 2px solid var(--fontPrimary);
+  border-right: 2px solid var(--fontPrimary);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.highlightsList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 2px;
+}
+
 .amenitiesImageContainer {
   position: relative;
   width: 100%;
